@@ -8,9 +8,23 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ReviewMine - Turn Guest Reviews into Conversion Gold",
-  description:
-    "Marketing intelligence for tour operators. Extract testimonials, map objections, track guide performance — all from reviews you've already collected.",
+  title: 'ReviewMine — Turn guest reviews into conversion gold',
+  description: 'Extract testimonials, map objections, track guide performance — all from reviews you've already collected. Marketing intelligence for tour operators.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  openGraph: {
+    title: 'ReviewMine — Turn guest reviews into conversion gold',
+    description: 'Extract testimonials, map objections, track guide performance — all from reviews you've already collected.',
+    url: 'https://reviewmine.ai',
+    siteName: 'ReviewMine',
+    type: 'website',
+  },
 };
 
 export default function RootLayout({
