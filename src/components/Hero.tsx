@@ -5,7 +5,7 @@ export default function Hero() {
         <p className="text-sm font-medium tracking-wide uppercase text-gray-500 dark:text-gray-400 mb-6">
           Every review analysed before you need it
         </p>
-        <h1 className="text-4xl md:text-5xl font-light tracking-tight text-gray-900 dark:text-gray-100 leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-light tracking-tight text-gray-900 dark:text-gray-100 leading-tight">
           Turn guest reviews into
           <br />
           <span className="font-normal">conversion gold.</span>

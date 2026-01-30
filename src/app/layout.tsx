@@ -9,7 +9,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'ReviewMine — Turn guest reviews into conversion gold',
-  description: 'Extract testimonials, map objections, track guide performance — all from reviews you've already collected. Marketing intelligence for tour operators.',
+  description: "Extract testimonials, map objections, track guide performance — all from reviews you've already collected. Marketing intelligence for tour operators.",
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'ReviewMine — Turn guest reviews into conversion gold',
-    description: 'Extract testimonials, map objections, track guide performance — all from reviews you've already collected.',
+    description: "Extract testimonials, map objections, track guide performance — all from reviews you've already collected.",
     url: 'https://reviewmine.ai',
     siteName: 'ReviewMine',
     type: 'website',
