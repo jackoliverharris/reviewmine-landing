@@ -23,15 +23,16 @@ export async function POST(request: NextRequest) {
     }
 
     const response = await fetch(
-      `https://api.kit.com/v4/forms/${CONVERTKIT_FORM_ID}/subscribers`,
+      `https://api.convertkit.com/v3/forms/${CONVERTKIT_FORM_ID}/subscribe`,
       {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Authorization": `Bearer ${CONVERTKIT_API_KEY}`,
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          email_address: email,
+          api_key: CONVERTKIT_API_KEY,
+          email: email,
+          fields: {
+            review_count: reviewCount,
+          },
         }),
       }
     );
