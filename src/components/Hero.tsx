@@ -14,9 +14,6 @@ export default function Hero() {
           Extract testimonials, map objections, track guide performance — all
           from reviews you&apos;ve already collected.
         </p>
-        <p className="mt-4 text-sm italic text-gray-500 dark:text-gray-400">
-          Built for operators who want to run better tours, not just collect more stars.
-        </p>
       </div>
     </section>
   );

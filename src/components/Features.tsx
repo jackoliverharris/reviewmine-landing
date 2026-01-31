@@ -24,6 +24,9 @@ export default function Features() {
   return (
     <section className="px-6 py-16">
       <div className="max-w-6xl mx-auto">
+        <p className="text-sm font-medium tracking-wide uppercase text-gray-500 dark:text-gray-400 text-center mb-10">
+          Built for operators who want to run better tours, not just collect more stars
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature) => (
             <div
