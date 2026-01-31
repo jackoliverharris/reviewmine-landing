@@ -80,6 +80,9 @@ export default function WaitlistForm() {
 
         <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div>
+            <p className="text-sm text-gray-400 dark:text-gray-500 mb-3 text-center">
+              Beta launching February
+            </p>
             <label htmlFor="email" className="sr-only">
               Work email
             </label>
@@ -134,7 +137,7 @@ export default function WaitlistForm() {
               disabled={status === "submitting" || !reviewCount}
               className="w-full bg-gray-900 hover:bg-gray-800 text-white px-5 py-3 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-200"
             >
-              {status === "submitting" ? "Requesting..." : "Request access"}
+              {status === "submitting" ? "Requesting..." : "Get early access"}
             </button>
           </div>
 

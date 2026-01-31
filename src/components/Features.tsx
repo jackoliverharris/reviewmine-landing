@@ -39,6 +39,16 @@ export default function Features() {
             </div>
           ))}
         </div>
+
+        {/* Founder Quote */}
+        <div className="mt-16 mb-8 text-center max-w-2xl mx-auto">
+          <p className="text-lg italic text-gray-600 dark:text-gray-400 leading-relaxed">
+            &quot;I spent years trawling thousands of reviews for marketing copy, website quotes, and guide patterns. That&apos;s why I built this.&quot;
+          </p>
+          <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+            — Jack Harris, Founder
+          </p>
+        </div>
       </div>
     </section>
   );
