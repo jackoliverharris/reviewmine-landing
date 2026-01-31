@@ -100,6 +100,9 @@ export default function WaitlistForm() {
 
           <div>
             <fieldset>
+              <p className="text-xs text-gray-400 dark:text-gray-500 mb-2 text-center">
+                The more reviews you have, the more patterns you&apos;re missing.
+              </p>
               <legend className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
                 How many reviews do you have?
               </legend>
@@ -139,6 +142,9 @@ export default function WaitlistForm() {
             >
               {status === "submitting" ? "Requesting..." : "Get early access"}
             </button>
+            <p className="mt-2 text-xs text-gray-400 dark:text-gray-500">
+              You&apos;re on the list. Check your inbox.
+            </p>
           </div>
 
           {status === "error" && (

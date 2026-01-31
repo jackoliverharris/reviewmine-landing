@@ -43,10 +43,10 @@ export default function Features() {
         {/* Founder Quote */}
         <div className="mt-16 mb-8 text-center max-w-2xl mx-auto">
           <p className="text-lg italic text-gray-600 dark:text-gray-400 leading-relaxed">
-            &quot;I spent years trawling thousands of reviews for marketing copy, website quotes, and guide patterns. That&apos;s why I built this.&quot;
+            &quot;Every time I needed a testimonial, I&apos;d export reviews to Excel, paste batches into ChatGPT, hit the context limit, and start again.&quot;
           </p>
           <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
-            — Jack Harris, Founder
+            — Jack Harris, tour operator since 2011
           </p>
         </div>
       </div>
