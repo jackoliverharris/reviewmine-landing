@@ -111,7 +111,7 @@ export default function WaitlistForm() {
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
             Apply for early access
           </h2>
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
+          <p className="shrink-0 whitespace-nowrap text-xs font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
             Step {step} of 2
           </p>
         </div>

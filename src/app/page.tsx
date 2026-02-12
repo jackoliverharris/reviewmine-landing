@@ -10,6 +10,7 @@ import WhoIsThisFor from "@/components/WhoIsThisFor";
 import Faq from "@/components/Faq";
 import WaitlistForm from "@/components/WaitlistForm";
 import Footer from "@/components/Footer";
+import MobileStickyCta from "@/components/MobileStickyCta";
 
 export default function Home() {
   return (
@@ -37,11 +38,12 @@ export default function Home() {
         <div className="page-tone-6">
           <Faq />
         </div>
-        <div className="page-tone-7">
+        <div className="page-tone-7 pb-24 sm:pb-0">
           <WaitlistForm />
           <Footer />
         </div>
       </main>
+      <MobileStickyCta />
     </>
   );
 }
