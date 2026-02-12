@@ -101,7 +101,13 @@ const howItWorksSteps = [
 
 const connectPlatforms = [
   { name: "Google", src: "/logos/google.svg", width: 24, height: 12 },
-  { name: "TripAdvisor", src: "/logos/tripadvisor.svg", width: 42, height: 12 },
+  {
+    name: "TripAdvisor",
+    src: "/logos/tripadvisor.svg",
+    darkSrc: "/logos/tripadvisor-dark.svg",
+    width: 42,
+    height: 12,
+  },
   { name: "Airbnb", src: "/logos/airbnb.svg", width: 28, height: 12 },
   { name: "Viator", src: "/logos/viator.svg", width: 30, height: 12 },
 ];
@@ -362,8 +368,17 @@ export function HowItWorksSection() {
                           alt={platform.name}
                           width={platform.width}
                           height={platform.height}
-                          className="h-3 w-auto object-contain"
+                          className={`h-3 w-auto object-contain ${platform.darkSrc ? "dark:hidden" : ""}`}
                         />
+                        {platform.darkSrc && (
+                          <Image
+                            src={platform.darkSrc}
+                            alt={platform.name}
+                            width={platform.width}
+                            height={platform.height}
+                            className="hidden h-3 w-auto object-contain dark:block"
+                          />
+                        )}
                       </span>
                     ))}
                   </div>
