@@ -2,11 +2,32 @@ import Image from "next/image";
 
 const platforms = [
   { name: "Google", src: "/logos/google.svg", width: 92, height: 32, comingSoon: false },
-  { name: "TripAdvisor", src: "/logos/tripadvisor.svg", width: 132, height: 32, comingSoon: false },
+  {
+    name: "TripAdvisor",
+    src: "/logos/tripadvisor.svg",
+    darkSrc: "/logos/tripadvisor-dark.svg",
+    width: 132,
+    height: 32,
+    comingSoon: false,
+  },
   { name: "Airbnb", src: "/logos/airbnb.svg", width: 96, height: 32, comingSoon: false },
   { name: "Viator", src: "/logos/viator.svg", width: 112, height: 32, comingSoon: false },
-  { name: "Booking.com", src: "/logos/booking-com.svg", width: 124, height: 32, comingSoon: true },
-  { name: "Expedia", src: "/logos/expedia.svg", width: 108, height: 32, comingSoon: true },
+  {
+    name: "Booking.com",
+    src: "/logos/booking-com.svg",
+    darkSrc: "/logos/booking-com-dark.svg",
+    width: 124,
+    height: 32,
+    comingSoon: true,
+  },
+  {
+    name: "Expedia",
+    src: "/logos/expedia.svg",
+    darkSrc: "/logos/expedia-dark.svg",
+    width: 108,
+    height: 32,
+    comingSoon: true,
+  },
 ];
 
 export default function ReviewSignalsStrip() {
@@ -30,9 +51,20 @@ export default function ReviewSignalsStrip() {
                   width={platform.width}
                   height={platform.height}
                   className={`h-6 w-auto max-w-[124px] object-contain ${
-                    platform.comingSoon ? "grayscale" : ""
-                  }`}
+                    platform.darkSrc ? "dark:hidden" : ""
+                  } ${platform.comingSoon ? "grayscale" : ""}`}
                 />
+                {platform.darkSrc && (
+                  <Image
+                    src={platform.darkSrc}
+                    alt={platform.name}
+                    width={platform.width}
+                    height={platform.height}
+                    className={`hidden h-6 w-auto max-w-[124px] object-contain dark:block ${
+                      platform.comingSoon ? "grayscale" : ""
+                    }`}
+                  />
+                )}
               </div>
               <div className="mt-1 h-3">
                 {platform.comingSoon && (
