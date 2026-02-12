@@ -102,8 +102,8 @@ export default function WaitlistForm() {
           Get priority beta access.
         </h2>
         <p className="mt-2 text-base text-slate-600 dark:text-slate-300">
-          Join the beta list and help shape the first review intelligence tool
-          built specifically for tour operators.
+          Get early access to the tool that turns your reviews into bookings and
+          help shape it for operators like you.
         </p>
       </div>
       <div className="max-w-2xl mx-auto rounded-2xl border border-slate-200 bg-white/85 p-6 md:p-8 shadow-[0_20px_65px_-40px_rgba(15,23,42,0.7)] dark:border-slate-700 dark:bg-slate-900/70">
@@ -238,11 +238,6 @@ export default function WaitlistForm() {
 
           <p className="text-xs text-slate-400 dark:text-slate-500">
             No spam. Only product updates and invite details.
-          </p>
-
-          <p className="mt-6 text-center text-sm text-slate-500 dark:text-slate-400">
-            Built by Jack Harris: 15 years running premium London tours, 75,000+ pax
-            hosted, and a 4.9-star average rating.
           </p>
         </form>
       </div>

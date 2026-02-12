@@ -27,7 +27,7 @@ const features: Feature[] = [
     title: "Objection mapping",
     before: "Guessing what holds back bookings based on hunches.",
     after:
-      "Know which booking-fears tour and activity operators must answer before guests click book.",
+      "Know the exact hesitations you need to address before a guest clicks 'Book now.'",
     mockTitle: "Top objections this week",
     mockTags: ["First-time safety", "Cancellation policy", "Value for money"],
     mockSignal: "Most common concern: 'Is this suitable for beginners?'",
@@ -38,7 +38,7 @@ const features: Feature[] = [
     title: "Testimonial extraction",
     before: "Digging through spreadsheets and tabs to find one usable quote.",
     after:
-      "Auto-group your strongest testimonials into collections and publish ready-to-go proof blocks onto your side.",
+      "Auto-group your strongest testimonials into collections and publish ready-to-go proof blocks onto your site.",
     mockTitle: "Collections ready to deploy",
     mockTags: [
       "Homepage trust block",
@@ -93,7 +93,8 @@ const howItWorksSteps = [
   {
     number: 3,
     title: "Deploy",
-    description: "Publish targeted high-conviction proof blocks to convert more bookings.",
+    description:
+      "Publish the testimonials most likely to convert browsers into bookers right on your booking pages.",
     type: "deploy" as const,
   },
 ];
@@ -375,7 +376,7 @@ export function HowItWorksSection() {
                         fill="currentColor"
                       />
                     </svg>
-                    AI signal extraction in one pass
+                    Every review analyzed automatically, nothing missed
                   </div>
                 )}
                 {step.type === "deploy" && (
@@ -390,7 +391,7 @@ export function HowItWorksSection() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    Strongest conversion-ready widgets, one-click deploy
+                    One click to add testimonial widgets to your site
                   </div>
                 )}
               </article>

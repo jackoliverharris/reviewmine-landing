@@ -33,7 +33,8 @@ const profiles: Profile[] = [
     title: "Multi-guide tour teams",
     description:
       "You want to see which guides create the best guest outcomes and where coaching can improve consistency.",
-    outcome: "See 5-star velocity per guide updated weekly.",
+    outcome:
+      "Track 5-star reviews per tour by guide and see what drives stronger guest feedback.",
     accent: "border-t-emerald-300 dark:border-t-emerald-500/70",
     iconClass: "text-emerald-700 bg-emerald-100 dark:text-emerald-300 dark:bg-emerald-900/40",
     icon: (
@@ -54,8 +55,8 @@ const profiles: Profile[] = [
   {
     title: "Growth-stage brands",
     description:
-      "You already have review volume and want to use actionable insights to sharpen messaging, increase conversion and strengthen retention.",
-    outcome: "Deploy conversion-ready testimonial widgets to your booking pages.",
+      "You already have high review volume and need clear patterns you can trust across routes, guides, and seasons.",
+    outcome: "Surface issues and opportunities early, then act with confidence.",
     accent: "border-t-violet-300 dark:border-t-violet-500/70",
     iconClass: "text-violet-700 bg-violet-100 dark:text-violet-300 dark:bg-violet-900/40",
     icon: (

@@ -211,9 +211,12 @@ export default function Hero() {
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-300 max-w-xl">
             Pull the exact testimonials that convert, surface hidden objections,
-            and spot your best guides in one pass.
+            and spot your best guides in one clear workflow.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <p className="mt-4 text-sm font-medium text-slate-600 dark:text-slate-300">
+            Save an estimated 3-5 hours a week on review analysis.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
             <a
               href="#waitlist"
               className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-slate-800 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
@@ -227,6 +230,10 @@ export default function Hero() {
               See how it works
             </a>
           </div>
+          <p className="mt-4 max-w-xl text-sm text-slate-500 dark:text-slate-400">
+            Built by Jack Harris: 15 years running premium London tours, 75,000+
+            pax hosted, and a 4.9-star average rating.
+          </p>
         </div>
 
         <div className="relative">
