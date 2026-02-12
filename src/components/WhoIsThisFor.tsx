@@ -1,10 +1,12 @@
+import type { ReactElement } from "react";
+
 type Profile = {
   title: string;
   description: string;
   outcome: string;
   accent: string;
   iconClass: string;
-  icon: JSX.Element;
+  icon: ReactElement;
 };
 
 const profiles: Profile[] = [
