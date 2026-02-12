@@ -38,7 +38,7 @@ export default function Home() {
         <div className="page-tone-6">
           <Faq />
         </div>
-        <div className="page-tone-7 pb-24 sm:pb-0">
+        <div className="page-tone-7">
           <WaitlistForm />
           <Footer />
         </div>
