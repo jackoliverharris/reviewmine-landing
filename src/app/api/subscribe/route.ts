@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
   try {
-    const { email, reviewCount } = await request.json();
+    const { email, reviewCount, challenge } = await request.json();
 
     if (!email || !reviewCount) {
       return NextResponse.json(
@@ -31,6 +31,12 @@ export async function POST(request: Request) {
           email: email,
           source: 'landing_page',
           reviewCount: reviewCount,
+          ...(challenge
+            ? {
+                challenge,
+                whatIsYourBiggestReviewWorkflowBottleneck: challenge,
+              }
+            : {}),
         }),
       }
     );

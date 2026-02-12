@@ -1,19 +1,21 @@
+import Link from "next/link";
+
 interface LogoProps {
   className?: string;
   iconSize?: "sm" | "md" | "lg";
 }
 
 const sizeClasses = {
-  sm: "w-5 h-5",
-  md: "w-6 h-6",
-  lg: "w-8 h-8",
+  sm: "w-6 h-6",
+  md: "w-8 h-8",
+  lg: "w-10 h-10",
 };
 
 export default function Logo({ className = "", iconSize = "md" }: LogoProps) {
   return (
-    <a
+    <Link
       href="/"
-      className={`flex items-center gap-2.5 text-gray-800 dark:text-gray-100 ${className}`}
+      className={`flex items-center gap-3 text-gray-800 dark:text-gray-100 ${className}`}
     >
       <svg
         viewBox="0 0 32 32"
@@ -37,10 +39,10 @@ export default function Logo({ className = "", iconSize = "md" }: LogoProps) {
           opacity="0.7"
         />
       </svg>
-      <span className="text-base tracking-tight">
+      <span className="text-lg tracking-tight leading-none sm:text-xl">
         <span className="font-normal">Review</span>
         <span className="font-semibold">Mine</span>
       </span>
-    </a>
+    </Link>
   );
 }

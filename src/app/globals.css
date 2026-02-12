@@ -6,22 +6,238 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Smooth scrolling for anchor links */
+:root {
+  --bg-main: #f4efe5;
+  --bg-secondary: #e6f5f1;
+  --bg-accent: #fdf0cf;
+  --text-main: #0f172a;
+}
+
+.dark {
+  --bg-main: #020617;
+  --bg-secondary: #0f172a;
+  --bg-accent: #1e293b;
+  --text-main: #e2e8f0;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection styling */
-::selection {
-  background-color: rgb(20 184 166 / 0.2);
+body.page-body {
+  min-height: 100vh;
+  color: var(--text-main);
+  background:
+    radial-gradient(circle at 8% 12%, color-mix(in oklab, var(--bg-accent) 68%, transparent) 0%, transparent 38%),
+    radial-gradient(circle at 88% 18%, color-mix(in oklab, var(--bg-secondary) 68%, transparent) 0%, transparent 35%),
+    linear-gradient(135deg, var(--bg-main), color-mix(in oklab, var(--bg-main) 74%, white));
+  background-attachment: fixed;
 }
 
-/* Focus visible for accessibility */
+::selection {
+  background-color: rgb(16 185 129 / 0.22);
+}
+
 :focus-visible {
-  outline: 2px solid rgb(17 24 39);
+  outline: 2px solid rgb(15 23 42);
   outline-offset: 2px;
 }
 
 .dark :focus-visible {
-  outline-color: rgb(243 244 246);
+  outline-color: rgb(226 232 240);
+}
+
+@keyframes live-signal-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.72;
+    transform: scale(0.95);
+  }
+}
+
+.live-signal-dot {
+  animation: live-signal-pulse 3s ease-in-out infinite;
+}
+
+.page-tone-0 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.page-tone-1 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.page-tone-2 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.page-tone-3 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.page-tone-4 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.page-tone-5 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.page-tone-6 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.page-tone-7 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-0 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-1 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-2 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-3 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-4 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-5 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-6 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+.dark .page-tone-7 {
+  background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+}
+
+@supports (color: color-mix(in oklab, white 50%, black)) {
+  .page-tone-0 {
+    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+  }
+
+  .page-tone-1 {
+    background: linear-gradient(
+      180deg,
+      var(--bg-main) 0%,
+      color-mix(in oklab, var(--bg-main) 85%, var(--bg-secondary) 15%) 100%
+    );
+  }
+
+  .page-tone-2 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 85%, var(--bg-secondary) 15%) 0%,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-secondary) 35%) 100%
+    );
+  }
+
+  .page-tone-3 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-secondary) 35%) 0%,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-secondary) 50%) 100%
+    );
+  }
+
+  .page-tone-4 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-secondary) 50%) 0%,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-accent) 35%) 100%
+    );
+  }
+
+  .page-tone-5 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-accent) 35%) 0%,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-accent) 50%) 100%
+    );
+  }
+
+  .page-tone-6 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-accent) 50%) 0%,
+      var(--bg-main) 100%
+    );
+  }
+
+  .page-tone-7 {
+    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+  }
+
+  .dark .page-tone-0 {
+    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+  }
+
+  .dark .page-tone-1 {
+    background: linear-gradient(
+      180deg,
+      var(--bg-main) 0%,
+      color-mix(in oklab, var(--bg-main) 85%, var(--bg-secondary) 15%) 100%
+    );
+  }
+
+  .dark .page-tone-2 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 85%, var(--bg-secondary) 15%) 0%,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-secondary) 35%) 100%
+    );
+  }
+
+  .dark .page-tone-3 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-secondary) 35%) 0%,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-secondary) 50%) 100%
+    );
+  }
+
+  .dark .page-tone-4 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-secondary) 50%) 0%,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-accent) 35%) 100%
+    );
+  }
+
+  .dark .page-tone-5 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 65%, var(--bg-accent) 35%) 0%,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-accent) 50%) 100%
+    );
+  }
+
+  .dark .page-tone-6 {
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bg-main) 50%, var(--bg-accent) 50%) 0%,
+      var(--bg-main) 100%
+    );
+  }
+
+  .dark .page-tone-7 {
+    background: linear-gradient(180deg, var(--bg-main) 0%, var(--bg-main) 100%);
+  }
 }
