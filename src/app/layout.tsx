@@ -53,8 +53,6 @@ export default function RootLayout({
         />
       </head>
       <body className="page-body font-sans antialiased">
-        {children}
-        <Analytics />
         <Script id="linkedin-insight" strategy="afterInteractive">
           {`
             _linkedin_partner_id = "8679226";
@@ -71,6 +69,7 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             height="1"
             width="1"
@@ -79,6 +78,8 @@ export default function RootLayout({
             src="https://px.ads.linkedin.com/collect/?pid=8679226&fmt=gif"
           />
         </noscript>
+        {children}
+        <Analytics />
       </body>
     </html>
   );
