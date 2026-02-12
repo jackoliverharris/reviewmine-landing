@@ -54,7 +54,7 @@ const profiles: Profile[] = [
   {
     title: "Growth-stage brands",
     description:
-      "You already have review volume and want to turn it into better messaging, stronger conversion, and better retention.",
+      "You already have review volume and want to use actionable insights to sharpen messaging, increase conversion and strengthen retention.",
     outcome: "Deploy conversion-ready testimonial widgets to your booking pages.",
     accent: "border-t-violet-300 dark:border-t-violet-500/70",
     iconClass: "text-violet-700 bg-violet-100 dark:text-violet-300 dark:bg-violet-900/40",

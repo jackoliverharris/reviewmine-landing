@@ -27,7 +27,7 @@ const features: Feature[] = [
     title: "Objection mapping",
     before: "Guessing what holds back bookings based on hunches.",
     after:
-      "Know which booking fears tour and activity operators must answer before guests click book.",
+      "Know which booking-fears tour and activity operators must answer before guests click book.",
     mockTitle: "Top objections this week",
     mockTags: ["First-time safety", "Cancellation policy", "Value for money"],
     mockSignal: "Most common concern: 'Is this suitable for beginners?'",
@@ -38,20 +38,21 @@ const features: Feature[] = [
     title: "Testimonial extraction",
     before: "Digging through spreadsheets and tabs to find one usable quote.",
     after:
-      "Auto-group your strongest testimonials into collections and publish ready-to-go proof blocks on your site.",
+      "Auto-group your strongest testimonials into collections and publish ready-to-go proof blocks onto your side.",
     mockTitle: "Collections ready to deploy",
     mockTags: [
       "Homepage trust block",
       "Family tour social proof",
       "Checkout reassurance widget",
     ],
-    mockSignal: "Paste one snippet and keep testimonial proof fresh automatically.",
+    mockSignal:
+      "Publish your strongest conversion-ready testimonial widgets to your booking pages in one click.",
     preview: "widget",
     series: [5, 6, 8, 7, 9, 10, 11],
   },
   {
     title: "Guide performance",
-    before: "Performance reviews happen after complaints stack up.",
+    before: "Performance conversations happen after complaints stack up.",
     after: "Track 5-star review velocity per guide so you can coach earlier.",
     mockTitle: "Guide 5-star velocity",
     mockTags: ["Guide A", "Guide B", "Guide C"],
@@ -67,7 +68,7 @@ const features: Feature[] = [
   {
     title: "Pattern detection",
     before: "Patterns emerge only when someone has time to read hundreds of entries.",
-    after: "Spot the pattern after 5 reviews, not 500.",
+    after: "Spot emerging patterns early after 5 reviews, not 500.",
     mockTitle: "Emerging pattern alert",
     mockTags: ["Pickup confusion", "Meeting point photos", "Pre-tour reminders"],
     mockSignal: "Pattern triggered after 6 mentions in 48 hours.",
@@ -92,7 +93,7 @@ const howItWorksSteps = [
   {
     number: 3,
     title: "Deploy",
-    description: "Publish high-conviction proof blocks where they drive more bookings.",
+    description: "Publish targeted high-conviction proof blocks to convert more bookings.",
     type: "deploy" as const,
   },
 ];
@@ -389,7 +390,7 @@ export function HowItWorksSection() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                    Ready-to-publish proof widget
+                    Strongest conversion-ready widgets, one-click deploy
                   </div>
                 )}
               </article>
