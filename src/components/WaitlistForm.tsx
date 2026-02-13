@@ -161,17 +161,17 @@ export default function WaitlistForm() {
           Early access
         </p>
         <h2 className="mt-2 text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
-          Get priority beta access.
+          Get beta invite.
         </h2>
         <p className="mt-2 text-base text-slate-600 dark:text-slate-300">
-          Get early access to the tool that turns your reviews into bookings and
+          Get beta invite to the tool that turns your reviews into bookings and
           help shape it for operators like you.
         </p>
       </div>
       <div className="max-w-2xl mx-auto rounded-2xl border border-slate-200 bg-white/85 p-6 md:p-8 shadow-[0_20px_65px_-40px_rgba(15,23,42,0.7)] dark:border-slate-700 dark:bg-slate-900/70">
         <div className="flex items-center justify-between gap-3">
           <h2 className="text-2xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
-            Apply for early access
+            Get beta invite
           </h2>
           <p className="shrink-0 whitespace-nowrap text-xs font-semibold uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
             Step {step} of 2

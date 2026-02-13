@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 const LIVE_SIGNAL_CYCLE_MS = 6200;
@@ -216,6 +217,10 @@ export default function Hero() {
           <p className="mt-4 text-sm font-medium text-slate-600 dark:text-slate-300">
             Save an estimated 3-5 hours a week on review analysis.
           </p>
+          <p className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-slate-600 dark:text-slate-300">
+            <span className="inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            60+ tour and activity operators already on the beta list
+          </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a
               href="#waitlist"
@@ -230,10 +235,21 @@ export default function Hero() {
               See how it works
             </a>
           </div>
-          <p className="mt-4 max-w-xl text-sm text-slate-500 dark:text-slate-400">
-            Built by Jack Harris: 15 years running premium London tours, 75,000+
-            pax hosted, and a 4.9-star average rating.
-          </p>
+          <div className="mt-4 flex max-w-xl items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+            <span className="inline-flex h-10 w-10 shrink-0 overflow-hidden rounded-full border border-slate-200/80 bg-white dark:border-slate-700 dark:bg-slate-900">
+              <Image
+                src="/founder/jack-harris.png"
+                alt="Jack Harris"
+                width={40}
+                height={40}
+                className="h-full w-full object-cover"
+              />
+            </span>
+            <p>
+              Built by Jack Harris: 15 years running premium London tours, 75,000+
+              pax hosted, and a 4.9-star average rating.
+            </p>
+          </div>
         </div>
 
         <div className="relative">

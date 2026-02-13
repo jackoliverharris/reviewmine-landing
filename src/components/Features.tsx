@@ -168,7 +168,7 @@ export function FeaturesSection() {
           Built for tour and activity operators who want outcomes, not dashboards
         </p>
         <h2 className="mt-3 text-center text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
-          From review chaos to clear growth signals.
+          See what changes when every review gets analyzed.
         </h2>
         <p className="mt-3 max-w-2xl mx-auto text-center text-base leading-relaxed text-slate-600 dark:text-slate-300">
           Start with the same reviews you already have. Leave with sharper messaging,
@@ -488,7 +488,7 @@ export function OldWayComparisonSection() {
               The ReviewMine way
             </p>
             <h3 className="mt-2 text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-100">
-              Turn reviews into deployable proof and performance signals.
+              Make marketing and staffing calls with evidence.
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-slate-700 dark:text-slate-300">
               Connect once. ReviewMine reads every new review, groups your strongest

@@ -48,7 +48,7 @@ export default function MobileStickyCta() {
           aria-hidden={!shouldShow}
           className="block w-full rounded-xl border border-slate-900/80 bg-slate-900 px-5 py-3 text-center text-sm font-semibold uppercase tracking-[0.12em] text-white shadow-[0_18px_40px_-24px_rgba(15,23,42,0.9)] transition hover:bg-slate-800 dark:border-slate-100/80 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-white"
         >
-          Join the beta
+          Get beta invite
         </a>
       </div>
     </div>

@@ -24,6 +24,11 @@ const faqs = [
     answer:
       "Pricing will be announced before public launch. Beta users get early access and direct input into plan design.",
   },
+  {
+    question: "How is this different from just using ChatGPT?",
+    answer:
+      "ChatGPT can help with one-off prompts, but ReviewMine gives you a repeatable workflow. It ingests incoming reviews continuously, tracks patterns over time, and turns insights into publish-ready proof blocks without restarting context every session.",
+  },
 ];
 
 export default function Faq() {
