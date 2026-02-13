@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import MixpanelInit from "@/components/MixpanelInit";
 import "./globals.css";
 
 const inter = Inter({
@@ -10,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://reviewmine.ai"),
   title: "ReviewMine — Turn guest reviews into booking gold",
   description:
     "Extract testimonials, map objections, track guide performance — all from reviews you've already collected. Marketing intelligence for tour operators.",
@@ -28,6 +30,21 @@ export const metadata: Metadata = {
     url: "https://reviewmine.ai",
     siteName: "ReviewMine",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ReviewMine hero preview showing live review intelligence for tour operators",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ReviewMine — Turn guest reviews into booking gold",
+    description:
+      "Extract testimonials, map objections, track guide performance — all from reviews you've already collected.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -53,6 +70,7 @@ export default function RootLayout({
         />
       </head>
       <body className="page-body font-sans antialiased">
+        <MixpanelInit />
         <Script id="linkedin-insight" strategy="afterInteractive">
           {`
             _linkedin_partner_id = "8679226";

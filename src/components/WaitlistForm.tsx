@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useMemo, useState } from "react";
+import mixpanel from "mixpanel-browser";
 
 const reviewCountOptions = [
   { value: "under-1000", label: "Under 1,000" },
@@ -25,12 +26,48 @@ export default function WaitlistForm() {
 
   const progress = useMemo(() => (step === 1 ? 50 : 100), [step]);
 
+  const getPageUrl = () => (typeof window !== "undefined" ? window.location.href : "");
+
+  const getUtmValues = () => {
+    if (typeof window === "undefined") {
+      return {
+        utm_source: "direct",
+        utm_medium: "none",
+        utm_campaign: "none",
+      };
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    return {
+      utm_source: params.get("utm_source") || "direct",
+      utm_medium: params.get("utm_medium") || "none",
+      utm_campaign: params.get("utm_campaign") || "none",
+    };
+  };
+
   const handleContinue = () => {
     const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
     if (!valid) {
+      mixpanel.track("Sign In", {
+        user_id: email || "anonymous",
+        login_method: "email",
+        success: false,
+      });
+      mixpanel.track("Error", {
+        error_type: "validation",
+        error_message: "Invalid work email",
+        error_code: "invalid_email",
+        page_url: getPageUrl(),
+        user_id: email || "anonymous",
+      });
       setStatus("error");
       return;
     }
+    mixpanel.track("Sign In", {
+      user_id: email,
+      login_method: "email",
+      success: true,
+    });
     setStatus("idle");
     setStep(2);
   };
@@ -50,8 +87,33 @@ export default function WaitlistForm() {
         throw new Error("Subscription failed");
       }
 
+      const utmValues = getUtmValues();
+      mixpanel.identify(email);
+      mixpanel.people.set({
+        $email: email,
+      });
+      mixpanel.track("Sign Up", {
+        user_id: email,
+        email,
+        signup_method: "email",
+        utm_source: utmValues.utm_source,
+        utm_medium: utmValues.utm_medium,
+        utm_campaign: utmValues.utm_campaign,
+      });
+      mixpanel.track("Conversion", {
+        "Conversion Type": "beta_invite_request",
+        "Conversion Value": 1,
+      });
+
       setStatus("success");
     } catch {
+      mixpanel.track("Error", {
+        error_type: "network",
+        error_message: "Subscription failed",
+        error_code: "subscribe_failed",
+        page_url: getPageUrl(),
+        user_id: email || "anonymous",
+      });
       setStatus("error");
     }
   };
