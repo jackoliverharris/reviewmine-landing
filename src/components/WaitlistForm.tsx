@@ -91,11 +91,15 @@ export default function WaitlistForm() {
       mixpanel.identify(email);
       mixpanel.people.set({
         $email: email,
+        review_count: reviewCount,
+        biggest_review_workflow_bottleneck: challenge || "not_selected",
       });
       mixpanel.track("Sign Up", {
         user_id: email,
         email,
         signup_method: "email",
+        review_count: reviewCount,
+        biggest_review_workflow_bottleneck: challenge || "not_selected",
         utm_source: utmValues.utm_source,
         utm_medium: utmValues.utm_medium,
         utm_campaign: utmValues.utm_campaign,
@@ -103,6 +107,8 @@ export default function WaitlistForm() {
       mixpanel.track("Conversion", {
         "Conversion Type": "beta_invite_request",
         "Conversion Value": 1,
+        review_count: reviewCount,
+        biggest_review_workflow_bottleneck: challenge || "not_selected",
       });
 
       setStatus("success");
